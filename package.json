@@ -1,0 +1,43 @@
+{
+  "name": "@twilio-labs/docusaurus-plugin-refresh-session",
+  "version": "0.1.0-pre1",
+  "description": "Handle expired auth tokens on protected Docusaurus sites.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "watch": "tsc --build --watch",
+    "test": "jest",
+    "prepack": "rimraf lib && yarn run build && rimraf lib/src/tests",
+    "preci": "rm -rf node_modules",
+    "ci": "yarn install --frozen-lockfile",
+    "prepare": "husky install"
+  },
+  "repository": "https://github.com/twilio-labs/docusaurus-plugin-refresh-session",
+  "license": "MIT",
+  "dependencies": {
+    "@docusaurus/core": "2.0.0-beta.21",
+    "@docusaurus/types": "2.0.0-beta.21",
+    "@docusaurus/utils-validation": "2.0.0-beta.21",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@docusaurus/types": "2.0.0-beta.21",
+    "@types/jest": "^28.1.1",
+    "@types/segment-analytics": "^0.0.34",
+    "husky": "^8.0.1",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.4",
+    "typescript": "^4.7.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4 || ^17.0.0",
+    "react-dom": "^16.8.4 || ^17.0.0"
+  },
+  "engines": {
+    "node": ">=16.14"
+  }
+}
