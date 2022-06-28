@@ -1,8 +1,7 @@
 {
-  "references": [{ "path": "./tsconfig.client.json" }],
   "compilerOptions": {
     "target": "ES2020",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM"],
     "declaration": true,
     "declarationMap": false,
     "sourceMap": false,
@@ -45,6 +44,5 @@
     "rootDir": "src",
     "outDir": "lib"
   },
-  "include": ["src"],
-  "exclude": ["src/refresh-session.ts"]
+  "include": ["src"]
 }
